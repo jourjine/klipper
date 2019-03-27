@@ -23,6 +23,8 @@ choice
         bool "STMicroelectronics STM32F042"
     config MACH_STM32F1
         bool "STMicroelectronics STM32F103"
+    config MACH_STM32F103ZET
+        bool "STMicroelectronics STM32F103ZET"
     config MACH_PRU
         bool "Beaglebone PRU"
     config MACH_LINUX
