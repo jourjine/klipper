@@ -10,7 +10,7 @@ dirs-y += lib/hal-stm32f1/source
 CFLAGS += -mthumb -mcpu=cortex-m3
 CFLAGS += -Ilib/cmsis-core
 CFLAGS += -Ilib/cmsis-stm32f1/include -Ilib/hal-stm32f1/include
-CFLAGS += -DSTM32F103xB
+CFLAGS += -DSTM32F103xE
 
 # Add source files
 src-y += stm32f1/main.c stm32f1/gpio.c
@@ -27,7 +27,7 @@ $(OUT)%.o: %.s $(OUT)autoconf.h $(OUT)board-link
 	@echo "  Assembling $@"
 	$(Q)$(AS) $< -o $@
 
-asmsrc-y = ../lib/cmsis-stm32f1/source/startup_stm32f103xb.s
+asmsrc-y = ../lib/cmsis-stm32f1/source/startup_stm32f103xe.s
 OBJS_klipper.elf += $(patsubst %.s, $(OUT)src/%.o,$(asmsrc-y))
 
 # Build the linker script
