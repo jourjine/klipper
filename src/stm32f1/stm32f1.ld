@@ -8,12 +8,13 @@ ENTRY(Reset_Handler)
 
 MEMORY
 {
-  FLASH (rx) : ORIGIN = 0x08000000 + FLASH_START, LENGTH = 64K - FLASH_START
-  RAM  (xrw) : ORIGIN = 0x20000000, LENGTH = 20K
+  FLASH (rx) : ORIGIN = 0x08000000 + FLASH_START, LENGTH = 512K - FLASH_START
+  RAM  (xrw) : ORIGIN = 0x20000000, LENGTH = 64K
+  MEMORY_B1 (rx)  : ORIGIN = 0x60000000, LENGTH = 0K
 }
 
 /* highest address of the user mode stack */
-_estack = 0x20005000;
+_estack = 0x20010000;  /* end of 64K RAM */
 
 SECTIONS
 {
