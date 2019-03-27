@@ -125,6 +125,8 @@ void io_config(void)
     LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOC);
     LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOD);
     LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOE);
+    LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOF);
+    LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOG);
     /* JTAG is normally not needed, but blocks ports like PB3, PB4 */
     LL_GPIO_AF_Remap_SWJ_NOJTAG();
     /* Likewise, we don't need PB3 for TRACESWO output */
